@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_27_150524) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_28_103111) do
   create_table "bookings", force: :cascade do |t|
     t.decimal "total", precision: 15, scale: 5
     t.datetime "created_at", null: false
@@ -40,6 +40,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_150524) do
     t.string "whodunnit"
     t.text "object", limit: 1073741823
     t.datetime "created_at"
+    t.integer "services_count"
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
   end
 
